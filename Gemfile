@@ -43,3 +43,14 @@ group :development, :test do
   gem 'spring'
 end
 
+
+
+gem 'habtm_generator', :group => :development, :git => 'https://github.com/krishnakumar03/ruby-habtm-generator.git'
+
+gem 'paperclip'
+
+gem 'paranoia', '~> 2.0'
+
+gem 'puma'
+
+gem 'activeadmin', github: 'activeadmin'
