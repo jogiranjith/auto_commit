@@ -54,3 +54,5 @@ gem 'paranoia', '~> 2.0'
 gem 'puma'
 
 gem 'activeadmin', github: 'activeadmin'
+
+gem 'devise'
