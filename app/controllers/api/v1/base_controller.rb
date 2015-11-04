@@ -4,7 +4,7 @@ class Api::V1::BaseController < ApplicationController
   rescue_from Errors::Error, with: :render_error
   protect_from_forgery with: :null_session, only: Proc.new { |c| c.request.format.json? }
   before_filter :set_default_response_format, :authenticate_user_from_token!
-  
+
   layout false
 
   private
@@ -19,7 +19,7 @@ class Api::V1::BaseController < ApplicationController
 
   def authenticate_user_from_token!
     user_token = params[:auth_token].presence
-    user = user_token && Account.find_by_authentication_token(user_token.to_s)
+    user = user_token && User.find_by_authentication_token(user_token.to_s)
 
     if user
       # Notice we are passing store false, so the user is not
